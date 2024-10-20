@@ -11,8 +11,10 @@
 		<div class="nav">
 			<div class="logo"><img src="logo_universidad.png" alt=""></div>
 			<div class="titulo"><h2>Semaforo Inteligente</h2></div>
-			<div class="inicio"><a href="index.html">Inicio</a></div>
-			<div class="about"><a href="grupo_desarrollo.html">Grupo de Desarrollo</a></div>
+			<div class="menu">
+				<div class="inicio"><a href="index.html">Inicio</a></div>
+				<div class="about"><a href="grupo_desarrollo.html">Grupo de Desarrollo</a></div>
+			</div>
 		</div>
 		<div class="mensaje">
 			<h2>"Del pueblo venimos y hacia el pueblo vamos"</h2>
@@ -20,42 +22,36 @@
 		
 		<div class="Semaforos">
 			<div class="interseccion">
-				<div class="circulo " id="rojo"></div>
-				<div class="circulo " id="amarillo"></div>
-				<div class="circulo " id="verde"></div>
-				<div class="circulo " id="naranja"></div>
-				<div class="circulo " id="azul"></div>
+				<img id="norte" src="Imagenes/bombillo_apagado.png" alt="">
 			</div>
 			<div class="interseccion">
-				<div class="circulo " id="rojo1"></div>
-				<div class="circulo " id="amarillo1"></div>
-				<div class="circulo " id="verde1"></div>
-				<div class="circulo " id="naranja1"></div>
-				<div class="circulo " id="azul1"></div>
+				<img id="este" src="Imagenes/bombillo_apagado.png" alt="">
 			</div>
 			<div class="interseccion">
-				<div class="circulo " id="rojo2"></div>
-				<div class="circulo " id="amarillo2"></div>
-				<div class="circulo " id="verde2"></div>
-				<div class="circulo " id="naranja2"></div>
-				<div class="circulo " id="azul2"></div>
+				<img id="sur" src="Imagenes/bombillo_apagado.png" alt="">
 			</div>
 			<div class="interseccion">
-				<div class="circulo " id="rojo3"></div>
-				<div class="circulo " id="amarillo3"></div>
-				<div class="circulo " id="verde3"></div>
-				<div class="circulo " id="naranja3"></div>
-				<div class="circulo " id="azul3"></div>
+				<img id="oeste" src="Imagenes/bombillo_apagado.png" alt="">
 			</div>
-		</div>
-		<div class="estado">
-			<div>Estado Semaforo:</div>
-			<div id="texto" class="texto">Apagado</div>
-		</div>
+		</div>		
 		<div class="opciones">
-			<button class="caja_opciones encender" id="encender_semaforo">Encender Semaforo</button>
-			<button class="caja_opciones intermitente" id="intermitente">Intermitente</button>
-			<button class="caja_opciones apagar" id="apagar_semaforo">Apagar Semaforo</button>
+			<div class="estado">
+				<div>Estado Semaforo:</div>
+				<div id="texto" class="texto">Apagado</div>
+			</div>
+
+			<button class="caja_opciones encender" id="encender_semaforo">
+				<i>Encender Semaforo</i>
+				<div><img src="Imagenes/encender.png" alt=""></div>
+			</button>
+			<button class="caja_opciones intermitente" id="intermitente">
+				<i>Intermitente</i>
+				<div><img src="Imagenes/baliza-intermitente.png" alt=""></div>
+			</button>
+			<button class="caja_opciones apagar" id="apagar_semaforo">
+				<i>Apagar Semaforo</i>
+				<div><img src="Imagenes/apagar.png" alt=""></div>
+			</button>
 		</div>
 		<footer>Derechos Reservados | Estudiantes de la Universidad de Oriente | Año 2024 </footer>
 	</div>	

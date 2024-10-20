@@ -27,7 +27,7 @@
 }
 
 .logo img{
-	width: 25%;
+	width: 30%;
 }
 
 
@@ -41,8 +41,18 @@
 	align-items: center;
 }
 
-.about, .inicio{
+.menu{
 	width: 20%;
+
+	display: flex;
+	flex-direction: row;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.about, .inicio{
 
 	display: flex;
 	justify-content: center;
@@ -76,7 +86,7 @@
 	align-items: center;
 
 	width: 100%;
-	height: 9%;
+	height: 10%;
 	background-color: whitesmoke;
 	color: black;
 	font-family: monospace;
@@ -87,72 +97,70 @@
 
 .semaforos{
 	width: 100%;
-	height: 10%;
+	height: 20%;
 	background-color: whitesmoke;
-	border: 1px gray solid;
 
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 }
+
 .interseccion{
 	display: flex;
-	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 
-	width: 50%;
-	height: 50%;
-
+	width: 20%;
+	height: 90%;
 	margin: 5px;
-
-	border: 1px solid black;
-	border-radius: 50px;
-
-	background-color: darkgray;
 }
 
-.circulo{
-	width: 10%;
-	height: 80%;
-
-	margin: 5px;
-
-	border: 1px solid white;
-	border-radius: 50px;
+.interseccion img{
+	width: 30%;
+	height: 90%;
 }
 
 .estado{
-	width: 100%;
-	height: 10%;
-
-	background-color: whitesmoke;
-	color: black;
+	width: 35%;
+	height: 15%;
+	color: white;
 	font-size: 150%;
 	font-family: arial;
 	font-style: bold;
+	border-radius: 10px;
 
 
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 
 	justify-content: center;
 	align-items: center;
+
+	background-color: black;
 }
 
 .estado div{
 	margin: 5px;
+
+
 }
 
 
 
 .opciones{
-	background-color: whitesmoke;
+	background: url("Imagenes/Fondo.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	
 
 	width: 100%;
 	height: 50%;	
@@ -162,7 +170,7 @@
 	margin: 5px;
 	border-radius: 10px;
 
-	width: 20%;
+	width: 30%;
 	height: 15%;
 
 	color: black;
@@ -172,8 +180,35 @@
 
 	display: flex;
 	justify-content: center;
-	align-items: center; 
+	align-items: center;
+	flex-direction: row;
+
 }
+
+.caja_opciones i{
+	width: 70%;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+ 
+.caja_opciones div{
+	width: 30%;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.caja_opciones img{
+	margin: 5px;
+
+	width: 50%;
+}
+
 .encender{background-color: #98FB98}
 .encender:hover{background-color: #3CB371;}
 
