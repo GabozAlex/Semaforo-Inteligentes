@@ -1,286 +1,247 @@
-*{
-	margin:0px;
-	padding: 0px;
-	font-family: Arial, Helvetica, sans-serif;
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.panel{
-	width: 100%;
-	height: 100%;
+html, body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.nav{
-	display: flex;
-	flex-direction: row;
-
-	width:100%;
-	height: 10%;
-
-	background-color: black;
+.panel {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.logo{
-	width: 20%;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
+/* ============ NAV ============ */
+.nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 70px;
+    background-color: black;
+    padding: 0 5%;
 }
 
-.logo img{
-	width: 30%;
+.logo {
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-.titulo{
-	width:60%;
-
-	color: white;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.logo img {
+    width: 50px;
+    height: auto;
 }
 
-.menu{
-	width: 20%;
-
-	display: flex;
-	flex-direction: row;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
+.titulo {
+    flex: 1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.about, .inicio{
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	font-size: 100%;
-	font-style: bold;
+.titulo h2 {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    letter-spacing: 0.5px;
 }
 
-.about a, .inicio a{
-	text-decoration: none;
-	padding: 15px;
-
-	background-color: orange;
-	color: white;
-
+/* ============ MENSAJE ============ */
+.mensaje {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 60px;
+    background-color: #f5f5f5;
+    color: black;
+    font-style: italic;
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+    text-align: center;
+    padding: 15px 5%;
 }
 
-.about a:hover, .inicio a:hover{
- 	background-color: white;
- 	color: orange;
- 	padding: 17px;
- 	font-size: 105%;
-
+/* ============ SEMAFOROS ============ */
+.semaforos {
+    width: 100%;
+    padding: 40px 5%;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.mensaje{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	width: 100%;
-	height: 10%;
-	background-color: whitesmoke;
-	color: black;
-	font-style: italic;
-	font-size: 150%;
-
+.interseccion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    background: #e0e0e0;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
 }
 
-.semaforos{
-	width: 100%;
-	height: 20%;
-	background-color: whitesmoke;
-
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+.interseccion:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
 }
 
-.interseccion{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	width: 20%;
-	height: 90%;
-	margin: 5px;
+.interseccion img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
 }
 
-.interseccion img{
-	width: 30%;
-	height: 90%;
+/* ============ ESTADO ============ */
+.estado {
+    width: auto;
+    min-width: 250px;
+    padding: 15px 30px;
+    color: white;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: bold;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: black;
 }
 
-.estado{
-	width: 35%;
-	height: 15%;
-	color: white;
-	font-size: 150%;
-	font-style: bold;
-	border-radius: 10px;
-
-
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-
-	justify-content: center;
-	align-items: center;
-
-	background-color: black;
+/* ============ OPCIONES ============ */
+.opciones {
+    flex: 1;
+    background: url("Imagenes/Fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 5%;
+    gap: 15px;
 }
 
-.estado div{
-	margin: 5px;
-
-
+.caja_opciones {
+    width: 100%;
+    max-width: 350px;
+    padding: 18px 25px;
+    border-radius: 12px;
+    border: none;
+    color: black;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-
-
-.opciones{
-	background: url("Imagenes/Fondo.jpg");
-	background-repeat: no-repeat;
-	background-size:cover;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
-	
-
-	width: 100%;
-	height: 50%;	
+.caja_opciones:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-.caja_opciones{
-	margin: 5px;
-	border-radius: 10px;
-
-	width: 30%;
-	height: 15%;
-
-	color: black;
-	font-size: 150%;
-	font-style: bold;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-
+.caja_opciones img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
-.caja_opciones i{
-	width: 70%;
-	height: 100%;
+.encender { background-color: #98FB98; }
+.encender:hover { background-color: #3CB371; }
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
- 
-.caja_opciones div{
-	width: 30%;
-	height: 100%;
+.intermitente { background-color: #F0E68C; }
+.intermitente:hover { background-color: #FFD700; }
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+.apagar { background-color: #CD5C5C; color: white; }
+.apagar:hover { background-color: #8B0000; }
 
-.caja_opciones img{
-	margin: 5px;
-
-	width: 50%;
-}
-
-.encender{background-color: #98FB98}
-.encender:hover{background-color: #3CB371;}
-
-.intermitente{background-color: #F0E68C}
-.intermitente:hover{background-color: #FFD700}
-
-.apagar{background-color: #CD5C5C}
-.apagar:hover{background-color: #8B0000}
-
-.container{
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
-	background-color: whitesmoke;
+/* ============ FOOTER ============ */
+footer {
+    background-color: black;
+    width: 100%;
+    padding: 20px 5%;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.columna{
-	width: 80%;
-	margin: 5px;
-	padding: 30px;
+/* ============ RESPONSIVE ============ */
+@media screen and (max-width: 768px) {
+    .nav {
+        min-height: 60px;
+    }
 
-	background-color: #C0C0C0;
+    .logo img {
+        width: 40px;
+    }
+
+    .semaforos {
+        gap: 12px;
+        padding: 25px 5%;
+    }
+
+    .interseccion {
+        width: 80px;
+        height: 80px;
+    }
+
+    .interseccion img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .estado {
+        min-width: auto;
+        width: 90%;
+        padding: 12px 20px;
+    }
+
+    .caja_opciones {
+        max-width: 300px;
+        padding: 15px 20px;
+    }
+
+    .caja_opciones img {
+        width: 32px;
+        height: 32px;
+    }
 }
 
-.fila{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+@media screen and (max-width: 480px) {
+    .interseccion {
+        width: 65px;
+        height: 65px;
+    }
+
+    .interseccion img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .semaforos {
+        gap: 8px;
+    }
+
+    .opciones {
+        padding: 25px 5%;
+        gap: 12px;
+    }
 }
-.caja_fila{
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-}
-
-.columna_data{
-	width: 50%;
-}
-
-.columna_descripcion{
-	width: 50%;
-}
-
-.caja_fila p{
-	width: 100%;
-}
-
-.caja{
-	width: 20%;
-	margin: 10px;
-	padding: 20px;
-}
-
-.caja img{
-	width: 100px;
-	height: 100px;
-}
-
-footer{
-	background-color: black;
-
-	width: 100%;
-	height: 10%;
-
-	font-size: 150%;
-	font-style: bold;
-	color: white;
-
-	display: flex;
-
-	justify-content: center;
-	align-items: center;
-}
-
